@@ -16,7 +16,7 @@ class Layout extends Component {
     closeBackdropHandler = () => {
         console.log('Backdrop')
         this.setState({
-            menu: !this.state.menu
+            menu: false
         })
     }
 
