@@ -73,7 +73,6 @@ export default class Auth extends Component {
     }
 
     onChangeHandler = (event, controlName) => {
-        console.log(`${controlName}: `, event.target)
 
         const formControls = {...this.state.formControls} // copy of STATE object
         const control = {...formControls[controlName]}
@@ -83,9 +82,9 @@ export default class Auth extends Component {
         control.valid = this.validateControl(control.value, control.validation)
 
         formControls[controlName] = control
-        
+     
         this.setState({
-            formControls 
+            formControls
         })
     }
 
@@ -110,6 +109,8 @@ export default class Auth extends Component {
     }
 
     render() {
+        const isFormValid = this.state.formControls.email.valid && this.state.formControls.password.valid
+
         return (
             <div className={classes.Auth}>
                 <div>
@@ -122,12 +123,14 @@ export default class Auth extends Component {
                         <Button 
                         type="success"
                         onClick={this.loginHandler}
+                        disabled={!isFormValid}
                         >
                             Sign In
                         </Button>
                         <Button 
                         type="primary"
                         onClick={this.registerHandler}
+                        disabled={!isFormValid}
                         >
                             Log In
                         </Button>
