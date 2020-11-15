@@ -15,7 +15,7 @@ const Select = props => {
                     return (
                         <option
                             value={option.value}
-                            ley={option.value + index}
+                            key={option.value + index}
                         >
                             {option.text}
                         </option>
