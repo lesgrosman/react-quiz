@@ -28,15 +28,13 @@ class QuizList extends Component {
     }
 
     render() {
+        console.log(this.props.quizes.length)
         return (
             <div className={classes.QuizList}>
                 <div>
                     <h1>Quiz List</h1>
 
-
-                    
-
-                    { this.props.loading && this.props.quizes.length !== 0
+                    { this.props.loading && !this.props.quizes.length !== 0
                         ?  <Loader/>
                         : <ul>
                             { this.renderQuizes() }
