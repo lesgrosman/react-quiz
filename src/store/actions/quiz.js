@@ -83,7 +83,6 @@ export function quizNextQuestion(number) {
 //// GET from Server //////////////
 ///////////////////////////////////
 export function fetchQuizes() {
-    console.log('LIST')
     return async dispatch => {
         dispatch(fetchQuizesStart())
         try {

@@ -28,7 +28,6 @@ class QuizList extends Component {
     }
 
     render() {
-        console.log(this.props.quizes.length)
         return (
             <div className={classes.QuizList}>
                 <div>

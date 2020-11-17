@@ -121,7 +121,6 @@ class QuizCreator extends Component {
     }
 
     render() {
-        console.log(this.props)
         const select = <Select
             label="Choose correct answer"
             value={this.state.rightAnswerId}
