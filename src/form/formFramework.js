@@ -1,3 +1,11 @@
+export function createOptionControl (number) {
+    return createControl({
+        label: `Option ${number}`,
+        errorMessage: 'Option cannot be empty',
+        id: number
+    }, {required: true})
+}
+
 export function createControl(config, validation) {
     return {
         ...config,

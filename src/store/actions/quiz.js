@@ -12,6 +12,9 @@ import {
 } from './actionTypes'
 
 
+////////////////////////////////////////
+///////////// Quiz Page/////////////////
+////////////////////////////////////////
 export function quizAnswerClick(answerId) {
     return (dispatch, getState) => {
         const state = getState().quiz
@@ -48,7 +51,6 @@ export function quizAnswerClick(answerId) {
         }
     }
 }
-
 
 export function retryQuiz() {
     return {

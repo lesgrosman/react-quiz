@@ -1,3 +1,4 @@
+
 import {
     FETCH_QUIZES_START, 
     FETCH_QUIZES_SUCCESS, 
@@ -58,7 +59,6 @@ export default function quizReducer(state = initialState, action) {
                 isFinished: false,
                 results: {}
             }
-
         default:
             return state
     }    
